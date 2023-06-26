@@ -22,7 +22,7 @@ public class Profile {
 	private String otherName;
 	@Enumerated(EnumType.STRING)
 	private EGender gender;
-	//private String[] photos;
+	private String[] photos;
 	private String address;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
@@ -77,6 +77,12 @@ public class Profile {
 	}
 	public void setUser(User user) {
 		this.user = user;
+	}
+	public String[] getPhotos() {
+		return photos;
+	}
+	public void setPhotos(String[] photos) {
+		this.photos = photos;
 	}
     
     
