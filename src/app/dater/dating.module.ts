@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { ExploreComponent } from './explore/explore.component';
 import { ChatComponent } from './chat/chat.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DaterComponent } from './dater.component';
+import { MaterialModule } from '../material.module';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     ExploreComponent,
     ChatComponent,
-    ProfileComponent
+    ProfileComponent,
+    DaterComponent
   ],
   imports: [
     CommonModule,
-    DatingRoutingModule
+    DatingRoutingModule,
+    MaterialModule
   ]
 })
 export class DatingModule { }
