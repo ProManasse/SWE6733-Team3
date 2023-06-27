@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MaterialModule } from './material.module';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { ToastrModule } from 'ngx-toastr';
     NgbModule,
     MaterialModule,
     ToastrModule.forRoot(),
+    HttpClientModule,
+    FormsModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,61 +1,40 @@
 <mat-card>
+    <mat-card-header>
+        <mat-card-title style="font-weight: bolder;">Login</mat-card-title>
+        <mat-card-subtitle>let's know who you are</mat-card-subtitle>
+      </mat-card-header>
     <mat-card-content>
-      <form  (ngSubmit)="onSubmit(formdata.value)">
-        <h2>Log In</h2>
-        <!-- <mat-error *ngIf="!loginValid">
-            The username and password were not recognized
-          </mat-error> -->
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+        <mat-error *ngIf="!loginValid">
+          The username and password were not recognized
+        </mat-error>
         <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="Email" formControlName="email" autocomplete="off">
-          <mat-icon matSuffix>alternate_email</mat-icon>
-          <mat-hint>hint: username@mailserver.domain</mat-hint>
-        </mat-form-field>
-  
-        <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
-          <input matInput placeholder="password" formControlName="password" [type]="hide ? 'password' : 'text'"
-            autocomplete="off">
-          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </mat-form-field>
-  
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="usernname" [(ngModel)]="username" name="username" required>
+            <mat-icon matSuffix>person</mat-icon>
+            <mat-hint>e.g mroger</mat-hint>
+            <mat-error>
+                Please provide a valid username
+              </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" [(ngModel)]="password" name="password" required>
+            <mat-icon matSuffix>vpn_key</mat-icon>
+            <mat-hint>Hint: *****</mat-hint>
+            <mat-error>
+                Please provide a valid password
+              </mat-error>
+          </mat-form-field>
         <button mat-raised-button color="primary">Login</button>
-  
       </form>
+      <p>
+        don't have account? <button mat-button color="primary" routerLink="/signup">create account</button>
+      </p>
     </mat-card-content>
-    <div class="register">
-      you don't have account?
-      <button mat-stroked-button mat-button routerLink="registration" color="primary">Register</button>
-    </div>
-  
+    <mat-card-footer>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
   </mat-card>
-  
-  
-  
-  
-  <!--Dialog-->
-  
-  <div [style.display]="showModal ? 'block' : 'none'" class="modal" style="background-color: rgba(0,0,0,0.5);">
-    <div class="modal-dialog" style="margin-top: 200px;">
-      <div class="modal-content" style="width: auto; height: auto;">
-        <!-- <div class="modal-header">
-  
-        </div> -->
-        <div class="modal-body">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <mat-spinner style="width: 70px; height: 70px; position: relative;"></mat-spinner>
-              </div>
-              <div class="col-md-8" style="margin: auto;">
-                <h1>logging you in . . .</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="modal-footer">
-  
-        </div> -->
-      </div>
-    </div>
-  </div>
+
+

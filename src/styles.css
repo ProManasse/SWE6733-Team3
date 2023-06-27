@@ -14,7 +14,7 @@ h1 {
 }
 
 footer{
-  background-color: #93b1bb;;
+  background-color: #1d0060;;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -28,7 +28,7 @@ footer{
 }
 
 header{
-  background-color: #93a9bb;
+  background-color: #210064;
   position: absolute;
   left: 0;
   top: 0;
@@ -55,7 +55,7 @@ html { overflow-x: hidden; }
   font-size: x-small;
   width: 100%;
   transform: translateX(100%); /* Animation start out of the screen */
-  color: whitesmoke;
+  color: rgb(37, 0, 97);
   /* Add the animation */
   animation: move 30s linear infinite /* infinite make reapeat the animation indefinitely */;
 }
