@@ -15,7 +15,7 @@
             <mat-icon class="example-tab-icon">home</mat-icon>
             Home
         </ng-template>
-        Content 1
+        <router-outlet></router-outlet>
     </mat-tab>
 
     <mat-tab>
@@ -51,10 +51,14 @@
         Content 3
     </mat-tab>
 </mat-tab-group>
-<router-outlet></router-outlet>
+
 
 <mat-menu #menu="matMenu">
-    <button mat-menu-item>
+    <button mat-menu-item routerLink="/dating/home">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+    <button mat-menu-item routerLink="/dating/profile">
       <mat-icon>edit</mat-icon>
       <span>Update Profile</span>
     </button>

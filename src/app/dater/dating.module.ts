@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DaterComponent } from './dater.component';
 import { MaterialModule } from '../material.module';
 import { AvatarModule } from 'ngx-avatars';
+import { UploadImagesComponent } from './upload-images/upload-images.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AvatarModule } from 'ngx-avatars';
     ExploreComponent,
     ChatComponent,
     ProfileComponent,
-    DaterComponent
+    DaterComponent,
+    UploadImagesComponent
   ],
   imports: [
     CommonModule,

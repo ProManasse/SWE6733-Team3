@@ -1,1 +1,107 @@
-<p>profile works!</p>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center; margin-top: 50px; font-weight: bolder;">Profile Information</h1>
+    </div>
+    <div class="row">
+        <div class="example-input-wrapper" style="text-align: center;">
+            <label for="title">Crow uses more information to present the user to his/her matchings. You will need to
+                fill out all required information for us to serve you will.</label>
+        </div>
+
+        <mat-vertical-stepper [linear]="false" #stepper [animationDuration]="'2000'">
+            <mat-step [stepControl]="firstFormGroup" style="padding: 2%;">
+                <form>
+                    <ng-template matStepLabel>Personal Information</ng-template>
+                    <mat-form-field class="example-form-field" appearance="outline" style="padding: 1%;">
+                        <mat-label>First Name</mat-label>
+                        <input matInput type="text" formControlName="firstName">
+                    </mat-form-field>
+                    <mat-form-field class="example-form-field" appearance="outline" style="padding: 1%;">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput type="text" formControlName="firstName">
+                    </mat-form-field>
+                    <mat-form-field class="example-form-field" appearance="outline" style="padding: 1%;">
+                        <mat-label>Gender</mat-label>
+                        <input matInput type="text" formControlName="firstName">
+                    </mat-form-field>
+                    <mat-form-field class="example-form-field" appearance="outline" style="padding: 1%;">
+                        <mat-label>DoB</mat-label>
+                        <input matInput type="text" formControlName="firstName">
+                    </mat-form-field>
+                    <mat-form-field class="example-form-field" appearance="outline" style="padding: 1%;">
+                        <mat-label>Address</mat-label>
+                        <input matInput type="text" formControlName="firstName">
+                    </mat-form-field>
+                    <mat-form-field class="example-form-field" appearance="outline" style="padding: 1%;">
+                        <mat-label>Phone No</mat-label>
+                        <input matInput type="text" formControlName="firstName">
+                    </mat-form-field>
+                    <div>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form>
+                    <ng-template matStepLabel>Crow Most Important Information</ng-template>
+                    <mat-form-field appearance="outline" style="padding: 1%;">
+                        <mat-label>Adventure</mat-label>
+                        <mat-select >
+                          <mat-option>None</mat-option>
+                          <mat-option value="SKIING">Skiing</mat-option>
+                          <mat-option value="BACKPACKING">Backpacking</mat-option>
+                          <mat-option value="TRAVEL">Travel</mat-option>
+                          <mat-option value="HIKING">Hiking</mat-option>
+                          <mat-option value="HOLIDATE">Holidate</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" style="padding: 1%;">
+                        <mat-label>Skills</mat-label>
+                        <mat-select >
+                          <mat-option>None</mat-option>
+                          <mat-option value="MEDICINE">Medicine</mat-option>
+                          <mat-option value="COMPUTING">Computing</mat-option>
+                          <mat-option value="MECHANIC">Mechanic</mat-option>
+                          <mat-option value="CONSTRUCTION">Construction</mat-option>
+                          <mat-option value="PSYCHOLOGY">Psychology</mat-option>
+                          <mat-option value="ART">Art</mat-option>
+                          <mat-option value="RELIGIOUS">Religious</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" style="padding: 1%;">
+                        <mat-label>Behaviour</mat-label>
+                        <mat-select >
+                          <mat-option>None</mat-option>
+                          <mat-option value="OPTIMIST">Optimist</mat-option>
+                          <mat-option value="PESIMIST">Pesimist</mat-option>
+                          <mat-option value="TRUSTING">Trusting</mat-option>
+                          <mat-option value="ENVIOUS">Envious</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form>
+                    <ng-template matStepLabel>Photos</ng-template>
+                    <app-upload-images></app-upload-images>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Preview and Submit</ng-template>
+                You are now done.
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-vertical-stepper>
+    </div>
+</div>
