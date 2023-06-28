@@ -8,6 +8,7 @@ import { ChatComponent } from './chat/chat.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DaterComponent } from './dater.component';
 import { MaterialModule } from '../material.module';
+import { AvatarModule } from 'ngx-avatars';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MaterialModule } from '../material.module';
   imports: [
     CommonModule,
     DatingRoutingModule,
-    MaterialModule
+    MaterialModule,
+    AvatarModule
   ]
 })
 export class DatingModule { }

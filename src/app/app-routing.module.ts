@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -8,7 +9,8 @@ const routes: Routes = [
   },
   {
     path:'dating',
-    loadChildren:()=>import('./dater/dating.module').then(m=>m.DatingModule)
+    loadChildren:()=>import('./dater/dating.module').then(m=>m.DatingModule),
+    // canActivate: [AuthGuard]
   }
 ];
 

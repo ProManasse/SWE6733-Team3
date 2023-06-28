@@ -3,6 +3,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { filter, Subject, take, takeUntil } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   public loginValid = true;
   public username = '';
   public password = '';
+  public processing:boolean=false;
 
   private _destroySub$ = new Subject<void>();
   private readonly returnUrl: string;
@@ -20,16 +22,17 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
-    private _authService: AuthService
+    private _authService: AuthService,
+    private _toastrService:ToastrService
   ) {
-    this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/game';
+    this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/dating';
   }
 
   public ngOnInit(): void {
-    // this._authService.isAuthenticated$.pipe(
-    //   filter((isAuthenticated: boolean) => isAuthenticated),
-    //   takeUntil(this._destroySub$)
-    // ).subscribe( _ => this._router.navigateByUrl(this.returnUrl));
+    this._authService.isAuthenticated$.pipe(
+      filter((isAuthenticated: boolean) => isAuthenticated),
+      takeUntil(this._destroySub$)
+    ).subscribe( _ => this._router.navigateByUrl(this.returnUrl));
   }
 
   public ngOnDestroy(): void {
@@ -37,19 +40,24 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   public onSubmit(): void {
+    this.processing=true;
     this.loginValid = true;
     var loginRequest={
       username:this.username,
       password:this.password
     }
-    this._authService.create(loginRequest).subscribe(
+    this._authService.login(loginRequest).subscribe(
       (response)=>{
         console.log(response);
         
+        this.loginValid = true;
+        this.processing=false
+        this._router.navigateByUrl('/dating');
       },
       (error)=>{
+        this.processing=false
         console.log(error);
-        
+        this._toastrService.error(error.error.message);
       }
     );
   }

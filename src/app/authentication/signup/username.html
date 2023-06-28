@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Your Username</h1>
+<div mat-dialog-content>
+  <p>Don't forget to write it somewhere.</p>
+  <mat-form-field>
+    <mat-label>username</mat-label>
+    <input matInput [(ngModel)]="data.username" readonly>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.username" cdkFocusInitial>Ok</button>
+</div>

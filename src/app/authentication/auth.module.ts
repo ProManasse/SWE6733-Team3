@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     AuthRoutingModule,
     MaterialModule,
-    ToastrModule,
+    ToastrModule.forRoot(),
     HttpClientModule,
     FormsModule  
   
