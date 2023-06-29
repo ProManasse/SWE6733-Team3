@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { filter, Subject, take, takeUntil } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     private _route: ActivatedRoute,
     private _router: Router,
     private _authService: AuthService,
-    private _toastrService:ToastrService
+    private _toastrService:ToastrService,
+    private _cookies:CookieService
   ) {
     this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/dating';
   }
@@ -47,9 +49,10 @@ export class LoginComponent implements OnInit, OnDestroy {
       password:this.password
     }
     this._authService.login(loginRequest).subscribe(
-      (response)=>{
-        console.log(response);
-        
+      (response:any)=>{
+        console.log(response.username);
+        this._cookies.set('username',response.username);
+        this._cookies.set('token',response.accessToken);
         this.loginValid = true;
         this.processing=false
         this._router.navigateByUrl('/dating');

@@ -62,11 +62,11 @@
       <mat-icon>edit</mat-icon>
       <span>Update Profile</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item (click)="logout()">
       <mat-icon>visibility_off</mat-icon>
       <span>Logout</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item (click)="delete()">
       <mat-icon>delete_permanently</mat-icon>
       <span>Delete Profile</span>
     </button>

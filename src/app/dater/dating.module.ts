@@ -11,6 +11,7 @@ import { MaterialModule } from '../material.module';
 import { AvatarModule } from 'ngx-avatars';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
 import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -28,7 +29,8 @@ import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DatingRoutingModule,
     MaterialModule,
     AvatarModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ]
 })
 export class DatingModule { }

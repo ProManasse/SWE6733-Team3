@@ -1,5 +1,6 @@
 import { HttpClient, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,12 +9,14 @@ import { Observable } from 'rxjs';
 export class DatingService implements HttpInterceptor{
 
   private baseUrl = 'http://localhost:9090/api/profile';
-
-  constructor(private http: HttpClient) { }
+  private token:String=''
+  constructor(private http: HttpClient,private cookieService:CookieService) { 
+    this.token=this.cookieService.get('token');
+  }
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     request = request.clone({
       setHeaders: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtcm9nZXIiLCJpYXQiOjE2ODc5OTMxMzUsImV4cCI6MTY4ODA3OTUzNX0.QoPHxEZyQeDZ5NTfz2EM7zJuJS2YYTVptbrflTAGALU`
+        Authorization: 'Bearer '+this.token
       }
     });
 
@@ -37,5 +40,13 @@ export class DatingService implements HttpInterceptor{
 
   getFiles(): Observable<any> {
     return this.http.get(`${this.baseUrl}/files`);
+  }
+
+  createProfile(profileDto:any){
+    return this.http.post(this.baseUrl+"/profile", profileDto);
+  }
+
+  deleteProfile(profileDto:any){
+    return this.http.post(this.baseUrl+"/remove", profileDto);
   }
 }
