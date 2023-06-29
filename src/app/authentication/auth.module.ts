@@ -9,6 +9,7 @@ import { MaterialModule } from '../material.module';
 import { ToastrModule } from 'ngx-toastr';
 import {  HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    FormsModule  
+    FormsModule,
+    NgbModule  
   
   ]
 })

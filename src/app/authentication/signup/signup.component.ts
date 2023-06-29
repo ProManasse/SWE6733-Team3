@@ -60,7 +60,7 @@ export class SignupComponent {
       },
       (error)=>{
         this.processing=false
-        this._toastr.error(error.error.message);
+        this._toastr.error("The system is down.Try again later.");
       }
     );
     

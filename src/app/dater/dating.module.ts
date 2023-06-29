@@ -10,6 +10,8 @@ import { DaterComponent } from './dater.component';
 import { MaterialModule } from '../material.module';
 import { AvatarModule } from 'ngx-avatars';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
+import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { UploadImagesComponent } from './upload-images/upload-images.component';
     CommonModule,
     DatingRoutingModule,
     MaterialModule,
-    AvatarModule
+    AvatarModule,
+    NgbModule
   ]
 })
 export class DatingModule { }

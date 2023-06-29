@@ -23,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
