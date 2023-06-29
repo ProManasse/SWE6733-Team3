@@ -2,10 +2,8 @@ package com.dating.crow.user.model;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import com.dating.crow.profile.model.Profile;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

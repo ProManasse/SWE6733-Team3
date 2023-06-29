@@ -1,5 +1,6 @@
 package com.dating.crow.profile.model;
 
+import java.time.LocalDate;
 import com.dating.crow.user.model.User;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -22,14 +23,19 @@ public class Profile {
 	private String otherName;
 	@Enumerated(EnumType.STRING)
 	private EGender gender;
+	private LocalDate dob;
 	private String[] photos;
 	private String address;
+	@Enumerated(EnumType.STRING)
+	private EAdventure adventure;
+	@Enumerated(EnumType.STRING)
+	private ESkill skill;
+	@Enumerated(EnumType.STRING)
+	private EBehavior behavior;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
-    
-    
-    
+
 	public Profile() {
 		super();
 	}
@@ -84,6 +90,28 @@ public class Profile {
 	public void setPhotos(String[] photos) {
 		this.photos = photos;
 	}
-    
-    
+	public EAdventure getAdventure() {
+		return adventure;
+	}
+	public void setAdventure(EAdventure adventure) {
+		this.adventure = adventure;
+	}
+	public ESkill getSkill() {
+		return skill;
+	}
+	public void setSkill(ESkill skill) {
+		this.skill = skill;
+	}
+	public EBehavior getBehavior() {
+		return behavior;
+	}
+	public void setBehavior(EBehavior behavior) {
+		this.behavior = behavior;
+	}
+	public LocalDate getDob() {
+		return dob;
+	}
+	public void setDob(LocalDate dob) {
+		this.dob = dob;
+	}
 }

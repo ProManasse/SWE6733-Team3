@@ -4,17 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,8 +26,11 @@ import com.dating.crow.profile.model.Profile;
 import com.dating.crow.profile.photo.FileInfo;
 import com.dating.crow.profile.photo.FilesStorageService;
 import com.dating.crow.profile.photo.ResponseMessage;
+import com.dating.crow.profile.repository.ProfileRepository;
 import com.dating.crow.profile.service.ProfileService;
+import com.dating.crow.user.dto.MessageResponse;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/profile")
 public class ProfileController {
@@ -41,14 +41,15 @@ public class ProfileController {
 	protected FilesStorageService storageService;
 
 	@GetMapping("/profiles")
-	// @PreAuthorize("hasRole('ADMIN')")
+	//@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<?> getAllProfiles() {
 		return new ResponseEntity<List<Profile>>(profileService.getProfiles(), HttpStatus.OK);
 	}
 
 	@PostMapping("/profile")
-	@PreAuthorize("hasRole('DATER')")
+	//@PreAuthorize("hasRole('DATER')")
 	public ResponseEntity<?> createProfile(@RequestBody ProfileDto profileDto) {
+		System.out.println(profileDto);
 		return new ResponseEntity<Profile>(profileService.create(profileDto), HttpStatus.OK);
 	}
 
@@ -78,7 +79,6 @@ public class ProfileController {
 			String url = MvcUriComponentsBuilder
 					.fromMethodName(ProfileController.class, "getFile", path.getFileName().toString()).build()
 					.toString();
-
 			return new FileInfo(filename, url);
 		}).collect(Collectors.toList());
 		return ResponseEntity.status(HttpStatus.OK).body(fileInfos);
@@ -91,4 +91,11 @@ public class ProfileController {
 				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"")
 				.body(file);
 	}
+	
+	@PostMapping("/remove")
+	public ResponseEntity<?> delete(@RequestBody ProfileDto profileDto){
+		return new ResponseEntity<MessageResponse>(profileService.deleteProfile(profileDto.getUsername()),HttpStatus.OK);
+	}
+	
+	
 }
