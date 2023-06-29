@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { DatingService } from './dating.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-dater',
@@ -10,7 +11,11 @@ import { DatingService } from './dating.service';
 })
 export class DaterComponent {
   title:string='Component Name'
-  constructor(private _cookieService:CookieService,private _router:Router,private _daterService:DatingService){
+  constructor(
+    private _cookieService:CookieService,
+    private _router:Router,
+    private _daterService:DatingService,
+    private _toastr:ToastrService){
     
   }
   logout(){
@@ -21,15 +26,16 @@ export class DaterComponent {
 
   delete(){
     var pDto={
-      username:this._cookieService.delete('username')
+      username:this._cookieService.get('username')
     }
     this._daterService.deleteProfile(pDto).subscribe(
-      (response)=>{
-        console.log(response);
+      (response:any)=>{
+        this._toastr.success(response.message);
+        this.logout();
         
       },
       (error)=>{
-        console.log(error);
+        this._toastr.error("Something went wrong, please try again!");
       }
     );
   }

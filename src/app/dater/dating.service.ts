@@ -24,11 +24,11 @@ export class DatingService implements HttpInterceptor{
   }
 
   upload(file: File): Observable<HttpEvent<any>> {
+    console.log(file.name);
+    
     const formData: FormData = new FormData();
-
-
     formData.append('files', file);
-    formData.append('id','1');
+    formData.append('id',this.cookieService.get('id'));
 
     const req = new HttpRequest('POST', `${this.baseUrl}/upload`, formData, {
       reportProgress: true,

@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import { FormGroup, FormBuilder }  from '@angular/forms';
 import { DatingService } from '../dating.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-profile',
@@ -8,7 +9,7 @@ import { DatingService } from '../dating.service';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent {
-  constructor(private _formBuilder: FormBuilder,private _datingService:DatingService) {}
+  constructor(private _formBuilder: FormBuilder,private _datingService:DatingService,private _cookies:CookieService) {}
   personalFormGroup: FormGroup = this._formBuilder.group({
     firstName: [''],
     lastName: [''],
@@ -35,10 +36,11 @@ export class ProfileComponent {
       adventure:this.crowFormGroup.controls['adventure'].value,
       skill:this.crowFormGroup.controls['skill'].value,
       behavior:this.crowFormGroup.controls['behavior'].value,
-      username:'nkevin'
+      username:this._cookies.get('username')
     }
     this._datingService.createProfile(profileDto).subscribe(
-      (response)=>{
+      (response:any)=>{
+        this._cookies.set('id',response.id);
         console.log(response);
       },
       (error)=>{
