@@ -1,11 +1,40 @@
-<div class="tphoto"
+<!-- <div class="tphoto"
 [@cardAnimator]="animationState"
 (@cardAnimator.done)="resetAnimationState($event)"
 (swipeleft)='startAnimation("swipeleft")' 
 (swiperight)='startAnimation("swiperight")'
+*ngIf="hasData"
 >
-<img [src]="users[index].picture" title="tphoto" alt="Tinder Photo"  />
-<div class="tname">{{users[index].name}}, <span class="age">{{users[index].age}}</span></div>
+<img [src]="users[index].photos[0]" title="tphoto" alt="Tinder Photo"  />
+<div class="tname">{{users[0].name}}, <span class="age">{{users[0].id}}</span></div>
 <div class="tinfo"><i class="fa fa-book" aria-hidden="true"> 0</i><i class="fa fa-users" aria-hidden="true"> 0</i></div>
-</div>
+</div> -->
+
+<div class="card" [@cardAnimator]="animationState"
+(@cardAnimator.done)="resetAnimationState($event)"
+(swipeleft)='startAnimation("swipeleft")' 
+(swiperight)='startAnimation("swiperight")'
+*ngIf="hasData"
+style="height: 650px; width: 500px;" >
+    <img [src]="users[index].photos[0]"  class="card-img-top" alt="Wild Landscape" style="height: 500px; width: 500px;"/>
+    <div class="card-body">
+      <h5 class="card-title" style="font-weight: bolder; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">{{users[index].name}} {{users[index].otherName}}</h5>
+        <div class="row">
+            <div class="col-md-6">
+                <p style="font-weight: bold;">Adventure:</p>{{users[index].adventure}}
+            </div>
+            <div class="col-md-6">
+               <p style="font-weight: bold;">Skills:</p>{{users[index].skill}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p style="font-weight: bold;">Behavior:</p>{{users[index].behavior}}
+            </div>
+            <div class="col-md-6">
+                <p style="font-weight: bold;">Address:</p>{{users[index].address}}
+            </div>
+        </div>
+    </div>
+  </div>
 

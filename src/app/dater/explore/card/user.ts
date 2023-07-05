@@ -1,7 +1,7 @@
 export interface User {
     id: number;
-    picture: string;
-    age: number;
+    photos:any;
     name: string;
+    otherName: string;
     gender: string;
 }

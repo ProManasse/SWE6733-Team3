@@ -1,18 +1,26 @@
-<div class="tbg">
-    <div class="tbgwrap">
-        <app-card [parentSubject]="parentSubject"></app-card>
-        <div class="tcontrols">
-            <div class="example-button-container" style="margin-top: 5%;">
-                <button mat-fab (click)='cardAnimation("swipeleft")'  aria-label="Example icon button with a delete icon">
-                    <mat-icon style="transform: scale(2);">heart_broken</mat-icon>
-                </button>
-                <button (click)='cardAnimation("swiperight")' mat-fab aria-label="Example icon button with a delete icon" style="float: right;">
-                    <mat-icon style="transform: scale(2);">favorite</mat-icon>
-                </button>
+<div class="container" >
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8" style="margin-left: 200px;">
+            <app-card [parentSubject]="parentSubject" ></app-card>
+            <div class="tcontrols">
+                <div class="example-button-container" >
+                    <button mat-fab (click)='cardAnimation("swipeleft")'  aria-label="Example icon button with a delete icon">
+                        <mat-icon style="transform: scale(2);">heart_broken</mat-icon>
+                    </button>
+                    <button (click)='cardAnimation("swiperight")' mat-fab aria-label="Example icon button with a delete icon" style="float: right; margin-right: 350px;">
+                        <mat-icon style="transform: scale(2);">favorite</mat-icon>
+                    </button>
+                </div>
+                <!-- <div   (click)='cardAnimation("swipeleft")' class="tno"><i class="fa fa-times" aria-hidden="true"></i></div> -->
+                <!-- <div class="ti"><i class="fa fa-info" aria-hidden="true"></i></div> -->
+                <!-- <div (click)='cardAnimation("swiperight")' class="tyes"><i class="fa fa-heart" aria-hidden="true"></i></div> -->
             </div>
-            <!-- <div   (click)='cardAnimation("swipeleft")' class="tno"><i class="fa fa-times" aria-hidden="true"></i></div> -->
-            <!-- <div class="ti"><i class="fa fa-info" aria-hidden="true"></i></div> -->
-            <!-- <div (click)='cardAnimation("swiperight")' class="tyes"><i class="fa fa-heart" aria-hidden="true"></i></div> -->
+        </div>
+        <div class="col-md-2">
+
         </div>
     </div>
 </div>

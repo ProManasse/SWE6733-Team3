@@ -4,6 +4,7 @@ import * as kf from './keyframes';
 import { Subject } from 'rxjs';
 import { User } from './user';
 import  data from './users.json'
+import { DatingService } from '../../dating.service';
  
 @Component({
   selector: 'app-card',
@@ -17,15 +18,25 @@ import  data from './users.json'
   ]
 })
 export class CardComponent {
-  public users: any = data;
+  public users: any = [];
+  public profiless:any=[]
   public index = 0;
+  public hasData:boolean=false;
+
   @Input()
   parentSubject?: Subject<any>;
 
 
 
   animationState?: string;
-  constructor() { }
+  constructor(private _dating:DatingService) {
+  _dating.getProfiles().subscribe(
+    (response)=>{
+      this.users=response;
+      this.hasData=true;
+    }
+  );
+   }
 
   ngOnInit() {
     this.parentSubject?.subscribe(event => {
@@ -50,11 +61,16 @@ export class CardComponent {
   resetAnimationState(state:any) {
     this.animationState = '';
     this.index++;
+    console.log(this.index);
+    
   }
 
 
   ngOnDestroy() {
     this.parentSubject?.unsubscribe();
   }
+
+
+  
 
 }

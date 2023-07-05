@@ -50,5 +50,8 @@ export class DatingService implements HttpInterceptor{
     return this.http.post(this.baseUrl+"/remove", profileDto);
   }
 
+  getProfiles(): Observable<any> {
+    return this.http.get(this.baseUrl+"/profiles");
+  }
   
 }

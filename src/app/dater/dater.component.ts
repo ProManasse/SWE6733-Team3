@@ -19,8 +19,7 @@ export class DaterComponent {
     
   }
   logout(){
-    this._cookieService.delete('username');
-    this._cookieService.delete('token');
+    this._cookieService.deleteAll();
     this._router.navigateByUrl('/login');
   }
 
