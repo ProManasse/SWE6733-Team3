@@ -39,4 +39,9 @@ export class DaterComponent {
       }
     );
   }
+
+  show(){
+    this._router.navigateByUrl('/dating/profileview');
+  }
+
 }

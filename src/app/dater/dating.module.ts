@@ -12,6 +12,8 @@ import { AvatarModule } from 'ngx-avatars';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
 import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProfileviewComponent } from './profileview/profileview.component';
+import { CardComponent } from './explore/card/card.component';
 
 
 
@@ -22,7 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ChatComponent,
     ProfileComponent,
     DaterComponent,
-    UploadImagesComponent
+    UploadImagesComponent,
+    ProfileviewComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

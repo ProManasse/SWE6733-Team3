@@ -1,0 +1,13 @@
+.posts{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .like-comment{
+    font-size: 10px;
+    color:#333;
+    padding-bottom: 40px;
+    font-weight: bold;
+  }

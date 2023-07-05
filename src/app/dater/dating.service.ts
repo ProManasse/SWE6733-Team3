@@ -49,4 +49,6 @@ export class DatingService implements HttpInterceptor{
   deleteProfile(profileDto:any){
     return this.http.post(this.baseUrl+"/remove", profileDto);
   }
+
+  
 }

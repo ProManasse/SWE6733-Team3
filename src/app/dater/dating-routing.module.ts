@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ExploreComponent } from './explore/explore.component';
 import { ChatComponent } from './chat/chat.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ProfileviewComponent } from './profileview/profileview.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
       {path:'home',component:HomeComponent},
       {path:'explore',component:ExploreComponent},
       {path:'chat',component:ChatComponent},
-      {path:'profile',component:ProfileComponent}
+      {path:'profile',component:ProfileComponent},
+      {path:'profileview',component:ProfileviewComponent}
     ]
   }
 ];
