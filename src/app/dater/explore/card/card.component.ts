@@ -30,12 +30,12 @@ export class CardComponent {
 
   animationState?: string;
   constructor(private _dating:DatingService) {
-  _dating.getProfiles().subscribe(
-    (response)=>{
-      this.users=response;
-      this.hasData=true;
-    }
-  );
+  // _dating.getProfiles().subscribe(
+  //   (response)=>{
+  //     this.users=response;
+  //     this.hasData=true;
+  //   }
+  // );
    }
 
   ngOnInit() {

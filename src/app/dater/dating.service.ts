@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 export class DatingService implements HttpInterceptor{
 
   private baseUrl = 'http://localhost:9090/api/profile';
+  private baseUrlFriend = 'http://localhost:9090/api/friend';
+
   private token:String=''
   constructor(private http: HttpClient,private cookieService:CookieService) { 
     this.token=this.cookieService.get('token');
@@ -52,6 +54,10 @@ export class DatingService implements HttpInterceptor{
 
   getProfiles(): Observable<any> {
     return this.http.get(this.baseUrl+"/profiles");
+  }
+
+  getMyFriends(ownerId:any){
+    return this.http.post(this.baseUrlFriend+"/friends", ownerId);
   }
   
 }

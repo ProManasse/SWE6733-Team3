@@ -14,6 +14,7 @@ import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileviewComponent } from './profileview/profileview.component';
 import { CardComponent } from './explore/card/card.component';
+import { FriendsComponent } from './friends/friends.component';
 
 
 
@@ -26,7 +27,8 @@ import { CardComponent } from './explore/card/card.component';
     DaterComponent,
     UploadImagesComponent,
     ProfileviewComponent,
-    CardComponent
+    CardComponent,
+    FriendsComponent
   ],
   imports: [
     CommonModule,

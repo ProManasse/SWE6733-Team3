@@ -1,0 +1,20 @@
+<div class="container" >
+    <div class="row">
+        <mat-list>
+            <div mat-subheader style="font-weight: bold;">Friend Requests</div>
+            <mat-list-item *ngFor="let folder of friends">
+              <!-- <mat-icon matListItemIcon>folder</mat-icon> -->
+              <ngx-avatars matListItemIcon [size]="35" src="https://loremflickr.com/100/100"></ngx-avatars>
+              <div matListItemTitle>{{folder.friend.name}} {{folder.friend.otherName}}</div>
+              <div matListItemLine>{{folder.updated | date}}</div>
+            </mat-list-item>
+            <button mat-icon-button >
+                <mat-icon>add</mat-icon>
+            </button>
+                <button mat-icon-button>
+                <mat-icon>delete</mat-icon>
+            </button>
+            <mat-divider></mat-divider>
+          </mat-list>
+    </div>
+</div>
