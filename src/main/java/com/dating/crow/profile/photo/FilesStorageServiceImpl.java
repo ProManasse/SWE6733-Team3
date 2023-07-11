@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -81,18 +82,23 @@ public class FilesStorageServiceImpl implements FilesStorageService {
   
   @Override
 	public void updateProfile(String id,List<String> names) {
-		if (!profileRepository.findById(Long.parseLong(id)).isPresent()) {
+	  Optional<Profile> up = profileRepository.findById(Long.parseLong(id));
+		if (!up.isPresent()) {
 			//Exception
 		}
+		Profile pe=up.get();
 		String[] photos=new String[names.size()];
 		int i=0;
-		Profile up = profileRepository.findById(Long.parseLong(id)).get();
+		if(pe.getPhotos()!=null) {
+			i=pe.getPhotos().length;	
+		}
+		System.out.println(i);
 		for(String p:names) {
 			photos[i]=MvcUriComponentsBuilder.fromMethodName(ProfileController.class, "getFile", p).build().toString();
 			i++;
 		}
-		up.setPhotos(photos);
-		profileRepository.save(up);
+		pe.setPhotos(photos);
+		profileRepository.save(pe);
 	}
 
 }

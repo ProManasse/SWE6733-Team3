@@ -1,7 +1,12 @@
 package com.dating.crow.profile.model;
 
 import java.time.LocalDate;
+import java.util.List;
+
+import com.dating.crow.friendship.model.Friend;
 import com.dating.crow.user.model.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -10,6 +15,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -32,9 +38,16 @@ public class Profile {
 	private ESkill skill;
 	@Enumerated(EnumType.STRING)
 	private EBehavior behavior;
+	@JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
+	@JsonIgnore
+    @OneToMany(mappedBy="owner")
+    private List<Friend> friends;
+	@JsonIgnore
+    @OneToMany(mappedBy="friend")
+    private List<Friend> onwers;    
 
 	public Profile() {
 		super();
@@ -48,6 +61,15 @@ public class Profile {
 		this.address = address;
 		this.user = user;
 	}
+	
+	public Profile(String name, String otherName, EGender gender, String address, User user) {
+		this.name = name;
+		this.otherName = otherName;
+		this.gender = gender;
+		this.address = address;
+		this.user = user;
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -114,4 +136,18 @@ public class Profile {
 	public void setDob(LocalDate dob) {
 		this.dob = dob;
 	}
+	public List<Friend> getFriends() {
+		return friends;
+	}
+	public void setFriends(List<Friend> friends) {
+		this.friends = friends;
+	}
+	public List<Friend> getOnwers() {
+		return onwers;
+	}
+	public void setOnwers(List<Friend> onwers) {
+		this.onwers = onwers;
+	}
+	
+	
 }

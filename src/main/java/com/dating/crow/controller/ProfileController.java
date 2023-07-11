@@ -49,7 +49,6 @@ public class ProfileController {
 	@PostMapping("/profile")
 	//@PreAuthorize("hasRole('DATER')")
 	public ResponseEntity<?> createProfile(@RequestBody ProfileDto profileDto) {
-		System.out.println(profileDto);
 		return new ResponseEntity<Profile>(profileService.create(profileDto), HttpStatus.OK);
 	}
 
@@ -63,7 +62,9 @@ public class ProfileController {
 				storageService.save(accessCode, file);
 				fileNames.add(file.getOriginalFilename());
 			});
+			System.out.println("Start");
 			storageService.updateProfile(accessCode, fileNames);
+			System.out.println("End");
 			message = "Uploaded the files successfully: " + fileNames;
 			return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));
 		} catch (Exception e) {

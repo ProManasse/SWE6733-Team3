@@ -32,11 +32,11 @@ public class ProfileServiceImpl implements ProfileService{
 
 	@Override
 	public Profile create(ProfileDto profileDto) {
+		System.out.println("Tests are passing here");
 		Profile profile=new Profile();
 		profile.setName(profileDto.getName());
 		profile.setOtherName(profileDto.getOtherName());
 		profile.setGender(EGender.valueOf(profileDto.getGender()));
-		profile.setAddress(profileDto.getAddress());
 		profile.setAddress(profileDto.getAddress());
 		profile.setGender(EGender.valueOf(profileDto.getGender()));
 		profile.setAdventure(EAdventure.valueOf(profileDto.getAdventure()));
