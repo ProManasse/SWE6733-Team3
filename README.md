@@ -34,7 +34,7 @@ Second Sprint
 Third and Final Sprint
 
 <hr> 
-View our backlog, <a href="https://manassenk.atlassian.net/jira/software/c/projects/SKP/boards/2">Kanban board</a> and track progress on <a href="https://manassenk.atlassian.net/jira/software/projects/ST/boards/1/timeline">Jira</a>
+View our <a href="https://manassenk.atlassian.net/jira/software/c/projects/SKP/boards/2/backlog?issueLimit=100">backlog</a>, <a href="https://manassenk.atlassian.net/jira/software/c/projects/SKP/boards/2">Kanban board</a> and track progress on <a href="https://manassenk.atlassian.net/jira/software/projects/ST/boards/1/timeline">Jira</a>
 <br>
 View our <a href="https://github.com/ProManasse/SWE6733-Team3/wiki/Product-Vision">Product Vision</a>, expected features and 
 <a href="https://github.com/SWE6733-1/SWE6733/wiki/Definitions-of-Done">Definitions of Done</a>
