@@ -36,7 +36,7 @@ Third and Final Sprint
 <hr> 
 View our backlog and track progress on <a href="https://manassenk.atlassian.net/jira/software/projects/ST/boards/1/timeline">Jira</a>
 <br>
-View our <a href="https://github.com/SWE6733-1/SWE6733/wiki">Wiki</a> for more information on our <a href="https://github.com/ProManasse/SWE6733-Team3/wiki/Product-Vision">Product Vision</a>, expected features and 
+View our <a href="https://github.com/ProManasse/SWE6733-Team3/wiki/Product-Vision">Product Vision</a>, expected features and 
 <a href="https://github.com/SWE6733-1/SWE6733/wiki/Definitions-of-Done">Definitions of Done</a>
 
 <hr>
