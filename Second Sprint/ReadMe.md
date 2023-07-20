@@ -6,13 +6,19 @@ _Objective:_
 
 - You have a forecast of how many story points your team can complete during this sprint. Your forecast is based on the Yesterday's Weather forecasting pattern. The forecast along with its rationale are documented in your git’s repo.
 
+https://manassenk.atlassian.net/jira/software/c/projects/SKP/boards/2?selectedIssue=SKP-83
+
 <hr>
 
 - You decomposed stories into tasks. The tasks are clearly listed in your sprint backlog.
 
+https://manassenk.atlassian.net/jira/software/c/projects/SKP/boards/2/backlog?issueLimit=-1
+
 <hr>
 
 - Your sprint backlog, including both stories and tasks, is represented in a kanban board. The kanban board, or a URL of the kanban board (from your online management tool), is documented in your git’s repo. I should be able to view the board.[Update your sprint backlog task board. Make sure the URL or images are available in your git’s repo].
+
+https://manassenk.atlassian.net/jira/software/c/projects/SKP/boards/2?selectedIssue=SKP-83git
 
 <hr>
 
