@@ -39,6 +39,8 @@ _Objectives:_
 - What will you do in the next 24 hours to help the Development Team meet the Sprint Goal? Annotate your team's response so it's clear which team members plan to do which activities.
   - Mannesse will continue the development phase, I will look into creating an AWS account that will help us host the application and continue updating the README file.
 
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/36fe18b6-bad9-414c-b7df-f5afd07d4510)
+
 <hr>
 
 - Do you see any impediment that prevents you or the Development Team from meeting the Sprint Goal? What are the impediments? What is your impediment removal plan?
