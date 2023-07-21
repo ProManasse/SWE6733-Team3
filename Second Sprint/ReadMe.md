@@ -52,6 +52,7 @@ _Objectives:_
 
 ![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/c8bf3b0f-5ca0-4b01-9a13-2746487fb7e4)
 
+<img width="1413" alt="Screenshot 2023-07-21 at 2 37 21 PM" src="https://github.com/ProManasse/SWE6733-Team3/assets/61759930/40d09a92-827b-42ba-9954-8cebb78ebf31">
 
 <hr>
 
