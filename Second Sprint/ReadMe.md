@@ -26,6 +26,8 @@ _Objectives:_
 
       - Link to Burndown chart
 
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/9c5940e8-272b-4962-a9be-9ec0692dcbe5)
+
   <hr>
 
 - You have conducted multiple Daily Scrums. You have evidence of at least one daily scrum documented in your git’s repo, should cover the following three items:
