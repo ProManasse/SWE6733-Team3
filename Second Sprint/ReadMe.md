@@ -50,7 +50,8 @@ _Objectives:_
 
 - There is evidence that you paired or mobbed on your code. The evidence could be a photo or video of your team working together, or it could be some other kind of evidence. The evidence is included in your git’s repo.
 
-  - Need Image or Video
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/c8bf3b0f-5ca0-4b01-9a13-2746487fb7e4)
+
 
 <hr>
 
