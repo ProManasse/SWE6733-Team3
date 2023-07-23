@@ -54,6 +54,8 @@ _Objectives:_
 
 <img width="1413" alt="Screenshot 2023-07-21 at 2 37 21 PM" src="https://github.com/ProManasse/SWE6733-Team3/assets/61759930/40d09a92-827b-42ba-9954-8cebb78ebf31">
 
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/e9d875c4-c1be-4111-bf66-0d94c6ff1eee)
+
 <hr>
 
 - There is evidence that you are building your product test-first. There are at least 2 BDD / A-TDD test in your test suite (at least 1 new one this sprint), and it passes. There are at least 20 unit tests in your test suite (at least 10 new unit tests this sprint), and they all pass.
