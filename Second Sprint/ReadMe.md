@@ -85,7 +85,11 @@ Kudos:
 
 - You have a Continuous Integration (CI) system running in your project. The CI system automatically builds your code every time you merge to master. The CI system executes your tests every time it builds the code. Your rationale for the CI tool used (i.e., why did you use this CI tool?) is clearly documented in your git repo, plus the evidence/link is included in your git’s repo.
 
-  - Link to CICD
+Jenkins was set up in AWS successfully.
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/e9d875c4-c1be-4111-bf66-0d94c6ff1eee)
+
+We are facing error while integrating Jenkins with Github
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/6b698997-5267-40f8-a145-8d274683e714)
 
 <hr>
 
