@@ -98,3 +98,17 @@ We are facing error while integrating Jenkins with Github, (Note: We are still w
 <hr>
 
 - Your product increment is working software—the completed stories in this sprint must be reflected in the application/product (in form of features) and ready to show to your customer. A link to your work-in-progress application should be documented in your git’s repo.
+
+Demo Link
+https://kennesawedu.sharepoint.com/:v:/r/sites/Team-ESEPTeam1/Shared%20Documents/General/bandicam%202023-07-07%2019-06-35-044.mp4?csf=1&web=1&e=tbPeWk
+
+Chat Dev in progress
+
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/1fcef2f4-7585-4c8d-b533-84a15589349e)
+
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/7a86a710-c650-4906-b117-ddcfc9c80e22)
+
+Firebase
+
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/7cabcf26-b224-44b5-b993-8c2f4e1d1adc)
+
