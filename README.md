@@ -27,7 +27,7 @@ This team project aims to build an outdoor app for adventure seekers and provide
 
 You can view how we worked in every sprint:
 <br>
-<a href="https://github.com/ProManasse/SWE6733-Team3/tree/backendmaster/First%20Sprint">First Sprint</a>
+First Sprint
 <br>
 <a href="https://github.com/ProManasse/SWE6733-Team3/tree/backendmaster/Second%20Sprint">Second Sprint</a>
 <br>
