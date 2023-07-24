@@ -29,7 +29,7 @@ You can view how we worked in every sprint:
 <br>
 <a href="https://github.com/ProManasse/SWE6733-Team3/tree/backendmaster/First%20Sprint">First Sprint</a>
 <br>
-Second Sprint
+<a href="https://github.com/ProManasse/SWE6733-Team3/tree/backendmaster/Second%20Sprint">Second Sprint</a>
 <br>
 Third and Final Sprint
 
