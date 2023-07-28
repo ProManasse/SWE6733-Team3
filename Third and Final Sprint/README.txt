@@ -68,9 +68,7 @@ _Objectives:_
 - Your team conducts a Sprint Review. There should be an evidence to that.
 
 Things that we did well: 
-- We communicated well throughout the sprint process meeting three times and going over all material needed to complete the tasks.
-- We organized tasks effectively as a group and distributed tasks accordingly. 
-- Helped each other out when things became difficult.
+
 
 Things that need improvement: 
 - A bit of disconnect between development and organizational tasks.
