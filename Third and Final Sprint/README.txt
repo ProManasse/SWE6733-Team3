@@ -7,7 +7,7 @@ _Objectives:_
 
 - You have a forecast of how many story points your team can complete during this sprint. Your forecast is based on the Yesterday's Weather forecasting pattern. The forecast along with its rationale are documented in your git’s repo.
 
-  - https://manassenk.atlassian.net/jira/software/c/projects/SKP/boards/2?selectedIssue=SKP-83
+  
 
 <hr>
 
@@ -68,17 +68,19 @@ _Objectives:_
 - Your team conducts a Sprint Review. There should be an evidence to that.
 
 Things that we did well: 
-
+- Worked well as team.
+- Met often to discuss bugs and things to do next. 
+- Able to work rapidly to complete tasks.
+- Coordinated meeting times well.
 
 Things that need improvement: 
-- A bit of disconnect between development and organizational tasks.
-- Meeting in different timezones and non-school tasks made it difficult more often. 
-- Using multiple environments in order to complete tasks can be daunting and time consuming. 
+- Knowledge in subject matter
+- Need a better way to share instances
+- Difficulty in setting storypoint estimations in Jira
 
 Kudos:
-- To Manasse for completing most development tasks
-- To Manasse for setting Jira Tickets
-- To Luciano for organizing README document
+- Luciano for setting up Jenkins and ec2 instances 
+- For working and deploying application to Tomcat
 
 <hr>
 
