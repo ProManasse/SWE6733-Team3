@@ -1,5 +1,5 @@
 
-\***\*SECOND SPRINT\*\***
+\***\*THIRD SPRINT\*\***
 
 _Objectives:_
 
@@ -51,11 +51,7 @@ _Objectives:_
 
 - There is evidence that you paired or mobbed on your code. The evidence could be a photo or video of your team working together, or it could be some other kind of evidence. The evidence is included in your git’s repo.
 
-![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/c8bf3b0f-5ca0-4b01-9a13-2746487fb7e4)
-
-<img width="1413" alt="Screenshot 2023-07-21 at 2 37 21 PM" src="https://github.com/ProManasse/SWE6733-Team3/assets/61759930/40d09a92-827b-42ba-9954-8cebb78ebf31">
-
-![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/e9d875c4-c1be-4111-bf66-0d94c6ff1eee)
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/14323809/22de95a2-def9-4a62-a760-c3b1281bdffd)
 
 <hr>
 
@@ -87,10 +83,7 @@ Kudos:
 - You have a Continuous Integration (CI) system running in your project. The CI system automatically builds your code every time you merge to master. The CI system executes your tests every time it builds the code. Your rationale for the CI tool used (i.e., why did you use this CI tool?) is clearly documented in your git repo, plus the evidence/link is included in your git’s repo.
 
 Jenkins was set up in AWS successfully.(it can be accessed here http://ec2-18-219-46-114.us-east-2.compute.amazonaws.com:8080/login?from=%2F )
-![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/e9d875c4-c1be-4111-bf66-0d94c6ff1eee)
-
-We are facing error while integrating Jenkins with Github, (Note: We are still working on it.)
-![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/6b698997-5267-40f8-a145-8d274683e714)
+<img width="1437" alt="Screenshot 2023-07-28 at 3 02 47 PM" src="https://github.com/ProManasse/SWE6733-Team3/assets/14323809/6a47b90a-9f63-45f9-9b4f-ae3d7419a894">
 
 <hr>
 
