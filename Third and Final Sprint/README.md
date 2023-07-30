@@ -1,5 +1,5 @@
 
-\***\*THIRD SPRINT\*\***
+**THIRD SPRINT**
 
 _Objectives:_
 
@@ -27,7 +27,8 @@ _Objectives:_
 
       - Link to Burndown chart
 
-![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/9c5940e8-272b-4962-a9be-9ec0692dcbe5)
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/6e9e8ee5-58d8-49dc-80c6-5912b6634715)
+
 
   <hr>
 
