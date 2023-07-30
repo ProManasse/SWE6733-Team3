@@ -107,3 +107,8 @@ Firebase
 
 ![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/7cabcf26-b224-44b5-b993-8c2f4e1d1adc)
 
+Postgres
+
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/9a1ee59b-2ca9-4b56-b76b-7e7fd4d5d095)
+
+![image](https://github.com/ProManasse/SWE6733-Team3/assets/61759930/9b7eba62-6661-498b-ac6b-5c9213f57b45)
